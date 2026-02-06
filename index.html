@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MedTech Imperial — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="Assets/logo.jpg">
+</head>
+
+<body>
+  <!-- ===== Global Header / Banner (reuse on every page) ===== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="Assets/logo.jpg" alt="MedTech Imperial logo">
+        <span class="brand-text">
+          <strong>MedTech</strong> Imperial
+        </span>
+      </a>
+
+      <!-- Mobile menu toggle (no JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Primary">
+        <!-- Add 'aria-current="page"' on the active page link -->
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="team.html">Team</a>
+        <a href="events.html">Events</a>
+        <a href="partners.html">Partners</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero / Intro (Home only) ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Welcome to Imperial College London MedTech Society</h1>
+        <p>
+          
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://www.imperialcollegeunion.org/activities/a-to-z/medtech">Join us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About (Home only) ===== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about">
+      <h2 class="about-heading">ABOUT US</h2>
+
+      <p>
+        ..............
+      </p>
+
+      <p>
+        ..............
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stats box ===== -->
+<section class="section">
+  <div class="container">
+    <div class="stats-panel">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fa-solid fa-user-group"></i>   <!-- crowd / members -->
+          </div>
+          <div class="stat-number">1000+</div>
+          <div class="stat-label">Student members this year</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fa-solid fa-calendar-days"></i> <!-- calendar -->
+          </div>
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Events held each year</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fa-solid fa-users-gear"></i>        <!-- lab / committee -->
+          </div>
+          <div class="stat-number">10</div>
+          <div class="stat-label">Committee members</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fa-solid fa-handshake"></i>    <!-- partnerships -->
+          </div>
+          <div class="stat-number">10</div>
+          <div class="stat-label">Industry &amp; academic partners</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Newsletter banner ===== -->
+<section class="newsletter-banner">
+  <div class="newsletter-banner-inner">
+    <div class="newsletter-box">
+      <h2 class="newsletter-heading">Stay up to date</h2>
+      <p class="newsletter-copy">
+        Subscribe to our newsletter to hear about MedTech events, projects and opportunities at Imperial.
+      </p>
+
+      <form class="newsletter-form">
+        <label for="newsletter-email" class="sr-only">Email address</label>
+        <div class="newsletter-row">
+          <input
+            type="email"
+            id="newsletter-email"
+            class="newsletter-input"
+            placeholder="you@imperial.ac.uk"
+            required
+          >
+          <button type="submit" class="newsletter-btn">
+            Subscribe
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== Carousel (Home only) ===== -->
+<section class="section subtle">
+  <div class="container">
+    <h2 class="carousel-heading">What we offer</h2>
+
+    <div class="mt-carousel">
+      <div class="carousel-track">
+
+        <!-- Slide 1 -->
+        <article class="carousel-slide is-active">
+          <div class="carousel-media">
+            <img src="Assets/test.avif" alt="Students attending a MedTech talk">
+          </div>
+          <div class="carousel-content">
+            <h3 class="carousel-title">Talks</h3>
+            <p>
+              ...Description...
+            </p>
+          </div>
+        </article>
+
+        <!-- Slide 2 -->
+        <article class="carousel-slide">
+          <div class="carousel-media">
+            <img src="Assets/test.avif" alt="Students collaborating on projects">
+          </div>
+          <div class="carousel-content">
+            <h3 class="carousel-title">Projects</h3>
+            <p>
+              ...Description...
+            </p>
+          </div>
+        </article>
+
+        <!-- Slide 3 -->
+        <article class="carousel-slide">
+          <div class="carousel-media">
+            <img src="Assets/test.avif" alt="Panel discussion with speakers">
+          </div>
+          <div class="carousel-content">
+            <h3 class="carousel-title">Panels & Careers</h3>
+            <p>
+             ...Description...
+            </p>
+          </div>
+        </article>
+
+        <!-- Slide 4 -->
+        <article class="carousel-slide">
+          <div class="carousel-media">
+            <img src="Assets/test.avif" alt="Networking with partners and sponsors">
+          </div>
+          <div class="carousel-content">
+            <h3 class="carousel-title">Founder Academy</h3>
+            <p>
+              ...Description...
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- controls underneath -->
+    <div class="carousel-controls">
+      <button class="carousel-arrow prev" aria-label="Previous slide">‹</button>
+
+      <div class="carousel-dots" aria-label="Carousel pagination">
+        <button class="dot is-active" aria-label="Go to slide 1"></button>
+        <button class="dot" aria-label="Go to slide 2"></button>
+        <button class="dot" aria-label="Go to slide 3"></button>
+        <button class="dot" aria-label="Go to slide 4"></button>
+      </div>
+
+      <button class="carousel-arrow next" aria-label="Next slide">›</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <!-- Left side: logo + note -->
+    <div class="footer-left">
+      <div class="footer-brand">
+        <img src="Assets/logo.jpg" alt="MedTech Imperial logo small">
+        <span><strong>MedTech</strong> Imperial</span>
+      </div>
+      <p class="footnote">
+        © <span id="year"></span> MedTech Imperial Society · All rights reserved.
+      </p>
+    </div>
+
+    <!-- Right side: contact + socials -->
+    <div class="footer-right">
+      <div class="footer-meta">
+        <p class="footer-heading">Contact</p>
+        <p class="footer-email">
+          <a href="medtech@imperial.ac.uk">
+            medtech@imperial.ac.uk
+          </a>
+        </p>
+
+        <div class="socials" aria-label="MedTech Imperial social links">
+          <a href="https://instagram.com/imperialmedtech" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/medtechimperial/" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://x.com/imperialmedtech" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/MedTechImperial" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>MedTech Imperial</title>
+
+  <!-- Your main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome for icons (see next point) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+</head>
+
+
+  <!-- Tiny inline script just to set current year; safe to remove if not wanted -->
+<script>
+  // footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== Carousel logic =====
+  const track = document.querySelector('.carousel-track');
+  const slides = track ? Array.from(track.children) : [];
+  const prevBtn = document.querySelector('.carousel-arrow.prev');
+  const nextBtn = document.querySelector('.carousel-arrow.next');
+  const dotsNav = document.querySelector('.carousel-dots');
+  const dots = dotsNav ? Array.from(dotsNav.children) : [];
+  let currentIndex = 0;
+  let autoplayId = null;
+  const INTERVAL = 5000;   // 5 seconds
+  const STEP = 78;         // percentage shift per slide (lets neighbours peek)
+
+  function goToSlide(index){
+    if (!slides.length) return;
+
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+
+    // move track so current slide is centred-ish, leaving sides visible
+    track.style.transform = `translateX(-${index * STEP}%)`;
+
+    slides[currentIndex].classList.remove('is-active');
+    dots[currentIndex].classList.remove('is-active');
+
+    slides[index].classList.add('is-active');
+    dots[index].classList.add('is-active');
+
+    currentIndex = index;
+  }
+
+  function nextSlide(){ goToSlide(currentIndex + 1); }
+  function prevSlide(){ goToSlide(currentIndex - 1); }
+
+  function startAutoplay(){
+    stopAutoplay();
+    autoplayId = setInterval(nextSlide, INTERVAL);
+  }
+
+  function stopAutoplay(){
+    if (autoplayId) clearInterval(autoplayId);
+    autoplayId = null;
+  }
+
+  if (slides.length){
+    // ensure initial position
+    goToSlide(0);
+
+    // arrows
+    prevBtn && prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoplay();
+    });
+
+    nextBtn && nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoplay();
+    });
+
+    // dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        startAutoplay();
+      });
+    });
+
+    // start auto-rotation
+    startAutoplay();
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MedTech Imperial — Events</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="Assets/logo.jpg" />
+</head>
+
+<body>
+  <!-- ===== Global Header / Banner ===== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="Assets/logo.jpg" alt="MedTech Imperial logo" />
+        <span class="brand-text">
+          <strong>MedTech</strong> Imperial
+        </span>
+      </a>
+
+      <!-- Mobile menu toggle -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="team.html">Team</a>
+        <a href="events.html" aria-current="page">Events</a>
+        <a href="partners.html">Partners</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Events hero ===== -->
+  <section class="section events-hero">
+    <div class="container">
+      <h1 class="events-heading">Events & Opportunities</h1>
+      <p class="events-subtitle">
+
+      </p>
+
+      <div class="events-hero-cta">
+        <a class="btn btn-primary" href="#upcoming">View upcoming events</a>
+          </div> <!-- /events-list -->
+        </div> <!-- /events-main -->
+      </div> <!-- /events-upcoming-grid -->
+    </div>
+  </section>
+
+  <!-- ===== Upcoming events ===== -->
+  <section class="section" id="upcoming">
+    <div class="container">
+      <header class="events-section-header">
+        <h2 class="events-section-title">Upcoming Events</h2>
+        <p class="events-section-copy">
+          ......optional area for text.......
+        </p>
+      </header>
+
+
+      <div class="events-upcoming-grid">
+        <!-- Left column: calendar + timeline -->
+        <aside class="events-side" aria-label="Events calendar and timeline">
+          <div class="events-widget events-calendar" id="eventsCalendar">
+            <div class="cal-header">
+              <button class="cal-nav" type="button" data-cal-nav="-1" aria-label="Previous month">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <div class="cal-title" id="calTitle">Month YYYY</div>
+              <button class="cal-nav" type="button" data-cal-nav="1" aria-label="Next month">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="cal-weekdays" aria-hidden="true">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+
+            <div class="cal-grid" id="calGrid" role="grid" aria-label="Calendar days"></div>
+
+            <div class="cal-hint" id="calHint" aria-hidden="true"></div>
+          </div>
+
+          <div class="events-widget events-timeline" id="eventsTimeline">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Upcoming</h3>
+            </div>
+            <ul class="timeline-list" id="timelineList"></ul>
+          </div>
+        </aside>
+
+        <!-- Right column: event cards -->
+        <div class="events-main">
+          <div class="events-filterbar">
+            <button class="btn btn-outline events-reset" type="button" id="eventsResetBtn">
+              Show all
+            </button>
+            <div class="events-filter-label" id="eventsFilterLabel" aria-live="polite"></div>
+          </div>
+
+          <div class="events-list" id="eventsList">
+
+<!--
+  EVENTS ARE GENERATED FROM THE "EVENTS" ARRAY IN THE SCRIPT AT THE BOTTOM OF THIS FILE.
+  To add / edit / remove an event:
+  1) Scroll to the script section:  // ===== EDIT EVENTS HERE =====
+  2) Add a new object to the EVENTS array (poster, title, date, time, etc.)
+  The calendar + filtering + timeline will automatically update.
+--></div>
+
+      <!-- Empty state shown when a selected date has no matching events -->
+      <p class="events-empty-state" id="eventsEmptyState" hidden>
+        No events for this date. Try another date or click <strong>Show all</strong>.
+      </p>
+    </div>
+  </section>
+
+  
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <!-- Left side: logo + note -->
+      <div class="footer-left">
+        <div class="footer-brand">
+          <img src="Assets/logo.jpg" alt="MedTech Imperial logo small" />
+          <span><strong>MedTech</strong> Imperial</span>
+        </div>
+        <p class="footnote">
+          © <span id="year"></span> MedTech Imperial Society · All rights reserved.
+        </p>
+      </div>
+
+      <!-- Right side: contact + socials -->
+      <div class="footer-right">
+        <div class="footer-meta">
+          <p class="footer-heading">Contact</p>
+          <p>
+            <a href="mailto:medtech@imperial.ac.uk">
+              medtech@imperial.ac.uk
+            </a>
+          </p>
+
+          <div class="socials" aria-label="MedTech Imperial social links">
+            <a href="https://instagram.com/imperialmedtech" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/medtechimperial/" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com/imperialmedtech" aria-label="X (Twitter)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/MedTechImperial" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <script>
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function () {
+      const listEl = document.getElementById('eventsList');
+      if (!listEl) return;
+
+      // ===== EDIT EVENTS HERE =====
+      // Add / remove / edit events in this array. Everything else (calendar, filtering, timeline) updates automatically.
+      // Date format: "YYYY-MM-DD"
+      const EVENTS = [
+        {
+          title: "Intro to MedTech",
+          tagline: "Discover. Create. Innovate.",
+          date: "2025-12-12",
+          time: "18:00 – 20:00",
+          location: "Sherfield LT 322",
+          format: "Panel discussion + Q&A + networking",
+          poster: "Assets/events.jpg",
+          registerUrl: "https://example.com/event-registration",
+          posterUrl: "Assets/events.jpg",
+          description: [
+            "🧠 Join us for the first session of the MedTech Founder Academy - Ideation!",
+            "💡 The first step in building a MedTech startup - finding real problems in healthcare.",
+            "🎙️ Session led by Christian Kumar, Founder & CEO of Capital Kinetics, CEO of MedTech Makers Lab, and investor in 22+ MedTech ventures. With over 30 years of experience in investment banking, corporate finance, and innovation, Christian will share invaluable insights on what makes a MedTech idea truly fundable and impactful."
+          ]
+        },
+        {
+          title: "Intro to MedTech",
+          tagline: "Discover. Create. Innovate.",
+          date: "2025-12-18",
+          time: "18:00 – 20:00",
+          location: "Sherfield LT 322",
+          format: "Panel discussion + Q&A + networking",
+          poster: "Assets/events.jpg",
+          registerUrl: "https://example.com/event-registration",
+          posterUrl: "Assets/events.jpg",
+          description: [
+            "🧠 Join us for the second session of the MedTech Founder Academy.",
+            "💡 We’ll go deeper on validating problems and building an MVP roadmap.",
+            "🎙️ Speaker details coming soon."
+          ]
+        },
+        {
+          title: "Intro to MedTech",
+          tagline: "Discover. Create. Innovate.",
+          date: "2025-12-22",
+          time: "18:00 – 20:00",
+          location: "Sherfield LT 322",
+          format: "Panel discussion + Q&A + networking",
+          poster: "Assets/events.jpg",
+          registerUrl: "https://example.com/event-registration",
+          posterUrl: "Assets/events.jpg",
+          description: [
+            "🧠 Join us for the third session of the MedTech Founder Academy.",
+            "💡 Topic: customer discovery + early traction.",
+            "🎙️ Speaker details coming soon."
+          ]
+        }
+      ];
+      // ===== END EDIT SECTION =====
+
+      const monthMap = {
+        jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
+        jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11
+      };
+
+      const pad = (n) => String(n).padStart(2, '0');
+
+      const escapeHtml = (str) =>
+        String(str ?? '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+
+      const toDateObj = (iso) => {
+        // local midnight to avoid timezone shift issues
+        const [y, m, d] = iso.split('-').map((x) => parseInt(x, 10));
+        return new Date(y, m - 1, d);
+      };
+
+      const monthShort = (dateObj) =>
+        dateObj.toLocaleString(undefined, { month: 'short' });
+
+      // --- Render event cards from EVENTS ---
+      const renderCards = () => {
+        listEl.innerHTML = '';
+
+        EVENTS.forEach((ev, idx) => {
+          const dateObj = toDateObj(ev.date);
+          const day = dateObj.getDate();
+          const mon = monthShort(dateObj);
+          const year = dateObj.getFullYear();
+
+          const eventId = `event-${ev.date}-${idx + 1}`;
+
+          const descHtml = (ev.description || [])
+            .map((p) => `<p class="event-desc">${escapeHtml(p)}</p>`)
+            .join('');
+
+          const article = document.createElement('article');
+          article.className = 'event-card';
+          article.dataset.eventDate = ev.date;
+          article.id = eventId;
+
+          article.innerHTML = `
+            <div class="event-poster">
+              <img src="${escapeHtml(ev.poster)}" alt="${escapeHtml(ev.title)} poster" loading="lazy" />
+            </div>
+
+            <div class="event-content">
+              <div class="event-header-row">
+                <div class="event-title-block">
+                  <h3 class="event-title">${escapeHtml(ev.title)}</h3>
+                  ${ev.tagline ? `<p class="event-tagline">${escapeHtml(ev.tagline)}</p>` : ``}
+                </div>
+
+                <div class="event-date-card" aria-label="Event date">
+                  <span class="event-date-day">${escapeHtml(day)}</span>
+                  <span class="event-date-month">${escapeHtml(mon)}</span>
+                  <span class="event-date-year">${escapeHtml(year)}</span>
+                </div>
+              </div>
+
+              <div class="event-body">
+                <dl class="event-meta-list">
+                  <div class="event-meta-item">
+                    <dt><i class="fa-regular fa-clock"></i> Time</dt>
+                    <dd>${escapeHtml(ev.time || '')}</dd>
+                  </div>
+                  <div class="event-meta-item">
+                    <dt><i class="fa-solid fa-location-dot"></i> Location</dt>
+                    <dd>${escapeHtml(ev.location || '')}</dd>
+                  </div>
+                  <div class="event-meta-item">
+                    <dt><i class="fa-solid fa-users"></i> Format</dt>
+                    <dd>${escapeHtml(ev.format || '')}</dd>
+                  </div>
+                </dl>
+
+                <div class="event-description">
+                  ${descHtml}
+                </div>
+              </div>
+
+              <div class="event-actions">
+                ${ev.registerUrl ? `
+                  <a class="btn btn-primary" href="${escapeHtml(ev.registerUrl)}" target="_blank" rel="noopener">
+                    Register
+                  </a>` : ``}
+                ${ev.posterUrl ? `
+                  <a class="btn btn-outline" href="${escapeHtml(ev.posterUrl)}" target="_blank" rel="noopener">
+                    View poster
+                  </a>` : ``}
+              </div>
+            </div>
+          `;
+
+          listEl.appendChild(article);
+        });
+      };
+
+      renderCards();
+
+      // --- Build internal event objects (used by calendar + timeline + filtering) ---
+      const cards = Array.from(listEl.querySelectorAll('.event-card'));
+
+      const events = EVENTS.map((ev, idx) => {
+        const dateObj = toDateObj(ev.date);
+        return {
+          card: document.getElementById(`event-${ev.date}-${idx + 1}`),
+          title: ev.title || 'Event',
+          dateKey: ev.date,
+          time: ev.time || '',
+          year: dateObj.getFullYear(),
+          month: dateObj.getMonth(),
+          day: dateObj.getDate(),
+          dateObj
+        };
+      })
+        .filter((e) => e.card)
+        .sort((a, b) => a.dateObj - b.dateObj);
+
+      const eventsByDate = new Map();
+      for (const e of events) {
+        if (!eventsByDate.has(e.dateKey)) eventsByDate.set(e.dateKey, []);
+        eventsByDate.get(e.dateKey).push(e);
+      }
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const nextEvent = events.find((e) => e.dateObj >= today) || events[0] || null;
+
+      let viewYear = nextEvent ? nextEvent.year : today.getFullYear();
+      let viewMonth = nextEvent ? nextEvent.month : today.getMonth();
+      let selectedKey = null;
+
+      const calTitle = document.getElementById('calTitle');
+      const calGrid = document.getElementById('calGrid');
+      const calHint = document.getElementById('calHint');
+      const filterLabel = document.getElementById('eventsFilterLabel');
+      const resetBtn = document.getElementById('eventsResetBtn');
+      const emptyState = document.getElementById('eventsEmptyState');
+
+      // hide the hint copy (you asked for this removed)
+      if (calHint) calHint.textContent = '';
+
+      const monthHasAnyEvents = (y, m) => {
+        const prefix = `${y}-${pad(m + 1)}-`;
+        for (const k of eventsByDate.keys()) {
+          if (k.startsWith(prefix)) return true;
+        }
+        return false;
+      };
+
+      const renderCalendar = () => {
+        const first = new Date(viewYear, viewMonth, 1);
+        const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+        // Monday-first offset
+        const firstDow = (first.getDay() + 6) % 7;
+
+        calTitle.textContent = first.toLocaleString(undefined, { month: 'long', year: 'numeric' });
+        calGrid.innerHTML = '';
+
+        // leading blanks
+        for (let i = 0; i < firstDow; i++) {
+          const blank = document.createElement('div');
+          blank.className = 'cal-cell cal-blank';
+          calGrid.appendChild(blank);
+        }
+
+        for (let d = 1; d <= daysInMonth; d++) {
+          const key = `${viewYear}-${pad(viewMonth + 1)}-${pad(d)}`;
+
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'cal-day';
+          btn.setAttribute('role', 'gridcell');
+          btn.dataset.dateKey = key;
+          btn.textContent = String(d);
+
+          if (eventsByDate.has(key)) btn.classList.add('has-event');
+          if (selectedKey === key) btn.classList.add('is-selected');
+
+          const isToday =
+            viewYear === today.getFullYear() &&
+            viewMonth === today.getMonth() &&
+            d === today.getDate();
+
+          if (isToday) btn.classList.add('is-today');
+
+          btn.addEventListener('click', () => {
+            // toggle off if already selected
+            if (selectedKey === key) {
+              selectedKey = null;
+              applyFilter(null);
+              renderTimeline();
+              renderCalendar();
+              return;
+            }
+            selectedKey = key;
+            applyFilter(key, true);
+            renderTimeline();
+            renderCalendar();
+          });
+
+          calGrid.appendChild(btn);
+        }
+
+        // no hint text (kept empty on purpose)
+        if (calHint) {
+          calHint.textContent = monthHasAnyEvents(viewYear, viewMonth) ? '' : '';
+        }
+      };
+
+      const prettyDate = (key) => {
+        const [y, m, d] = key.split('-').map((x) => parseInt(x, 10));
+        return new Date(y, m - 1, d).toLocaleDateString(undefined, {
+          weekday: 'long',
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        });
+      };
+
+      const applyFilter = (key, scrollToFirst = false) => {
+        if (!key) {
+          cards.forEach((c) => c.classList.remove('is-hidden', 'is-highlight'));
+          filterLabel.textContent = '';
+          if (emptyState) emptyState.hidden = true;
+          return;
+        }
+
+        const matches = eventsByDate.get(key) || [];
+
+        cards.forEach((c) => {
+          const isMatch = c.dataset.eventDate === key;
+          c.classList.toggle('is-hidden', !isMatch);
+          c.classList.toggle('is-highlight', isMatch);
+        });
+
+        if (!matches.length) {
+          filterLabel.textContent = `No events on ${prettyDate(key)}.`;
+          if (emptyState) emptyState.hidden = false;
+          return;
+        }
+
+        if (emptyState) emptyState.hidden = true;
+
+        filterLabel.textContent = `Showing ${matches.length} event${matches.length > 1 ? 's' : ''} on ${prettyDate(key)}.`;
+
+        if (scrollToFirst) {
+          matches[0].card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+
+      const renderTimeline = () => {
+        const ul = document.getElementById('timelineList');
+        if (!ul) return;
+
+        ul.innerHTML = '';
+
+        const base = selectedKey ? new Date(selectedKey + 'T00:00:00') : today;
+
+        // If a date is selected, show those events first
+        const pinned = selectedKey ? (eventsByDate.get(selectedKey) || []) : [];
+        let upcoming = events.filter((e) => e.dateObj >= base);
+
+        // If everything is in the past, still show something
+        if (!selectedKey && upcoming.length === 0) upcoming = [...events];
+
+        const combined = selectedKey
+          ? [...pinned, ...upcoming.filter((e) => e.dateKey !== selectedKey)]
+          : upcoming;
+
+        const slice = combined.slice(0, 8);
+
+        for (const e of slice) {
+          const li = document.createElement('li');
+          li.className = 'timeline-item' + (selectedKey === e.dateKey ? ' is-active' : '');
+
+          const dateTxt = new Date(e.year, e.month, e.day).toLocaleDateString(undefined, {
+            day: '2-digit',
+            month: 'short'
+          });
+
+          li.innerHTML = `
+            <button type="button" class="timeline-btn">
+              <span class="timeline-date">${escapeHtml(dateTxt)}</span>
+              <span class="timeline-text">
+                <span class="timeline-name">${escapeHtml(e.title)}</span>
+                ${e.time ? `<span class="timeline-meta">${escapeHtml(e.time)}</span>` : ``}
+              </span>
+            </button>
+          `;
+
+          li.querySelector('button').addEventListener('click', () => {
+            selectedKey = e.dateKey;
+            viewYear = e.year;
+            viewMonth = e.month;
+
+            applyFilter(e.dateKey, false);
+            renderCalendar();
+            renderTimeline();
+
+            document.getElementById(e.card.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+
+          ul.appendChild(li);
+        }
+      };
+
+      // Month navigation
+      document.querySelectorAll('[data-cal-nav]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const delta = parseInt(btn.getAttribute('data-cal-nav'), 10) || 0;
+          viewMonth += delta;
+          if (viewMonth < 0) {
+            viewMonth = 11;
+            viewYear -= 1;
+          }
+          if (viewMonth > 11) {
+            viewMonth = 0;
+            viewYear += 1;
+          }
+          renderCalendar();
+        });
+      });
+
+      // Reset filter
+      resetBtn?.addEventListener('click', () => {
+        selectedKey = null;
+        applyFilter(null);
+        renderTimeline();
+        renderCalendar();
+      });
+
+      // Initial paint
+      renderCalendar();
+      renderTimeline();
+      applyFilter(null);
+    })();
+  </script>
+</body>
+</html>
